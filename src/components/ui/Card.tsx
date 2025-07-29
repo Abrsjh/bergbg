@@ -7,13 +7,17 @@ interface CardProps {
   className?: string;
   hover?: boolean;
   glass?: boolean;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 export const Card: React.FC<CardProps> = ({
   children,
   className,
   hover = false,
-  glass = false
+  glass = false,
+  onMouseEnter,
+  onMouseLeave
 }) => {
   const baseClasses = 'rounded-xl overflow-hidden';
   const hoverClasses = hover ? 'card-hover cursor-pointer' : '';
@@ -26,6 +30,8 @@ export const Card: React.FC<CardProps> = ({
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       className={cn(baseClasses, glassClasses, hoverClasses, className)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {children}
     </motion.div>

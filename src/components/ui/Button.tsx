@@ -29,12 +29,21 @@ export const Button: React.FC<ButtonProps> = ({
     lg: 'px-8 py-4 text-lg'
   };
 
+  // Separate motion props from button props
+  const {
+    onAnimationStart,
+    onAnimationComplete,
+    onUpdate,
+    onAnimationStop,
+    ...buttonProps
+  } = props as any;
+
   return (
     <motion.button
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={cn(baseClasses, variants[variant], sizes[size], className)}
-      {...props}
+      {...buttonProps}
     >
       {children}
     </motion.button>

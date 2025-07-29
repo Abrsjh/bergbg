@@ -6,13 +6,13 @@ import {
   Baby, 
   Bone, 
   Eye,
-  Stethoscope,
   Shield,
   Activity,
   Users,
   Clock,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  LucideIcon
 } from 'lucide-react';
 import { Card, CardHeader, CardContent } from '../ui/Card';
 import { Section, SectionHeader } from '../ui/Section';
@@ -22,7 +22,7 @@ interface ServiceData {
   id: string;
   name: string;
   description: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
   features: string[];
   stats: {
     label: string;

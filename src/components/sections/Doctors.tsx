@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  MapPin, 
   Calendar,
   Star,
   Award,
@@ -15,8 +14,7 @@ import {
   Brain,
   Baby,
   Bone,
-  Eye,
-  Activity
+  LucideIcon
 } from 'lucide-react';
 import { Card, CardHeader, CardContent } from '../ui/Card';
 import { Section, SectionHeader } from '../ui/Section';
@@ -43,7 +41,7 @@ interface Doctor {
     phone: string;
     email: string;
   };
-  specialtyIcon: React.ComponentType<{ size?: number; className?: string }>;
+  specialtyIcon: LucideIcon;
 }
 
 export const Doctors: React.FC = () => {

@@ -6,7 +6,6 @@ import {
   Heart,
   Shield,
   Clock,
-  Star,
   CheckCircle,
   Target,
   Eye,
@@ -161,7 +160,7 @@ export const About: React.FC = () => {
         viewport={{ once: true }}
         className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
       >
-        {stats.map((stat, index) => (
+        {stats.map((stat) => (
           <motion.div key={stat.label} variants={itemVariants}>
             <Card className="text-center p-8 hover:shadow-glow transition-all duration-300">
               <CardContent className="p-0">
@@ -198,7 +197,7 @@ export const About: React.FC = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {values.map((value, index) => (
+          {values.map((value) => (
             <motion.div key={value.title} variants={itemVariants}>
               <Card className="h-full p-8 hover:shadow-glow transition-all duration-300">
                 <CardContent className="p-0">

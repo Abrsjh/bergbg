@@ -1,3 +1,5 @@
+import { LucideIcon } from 'lucide-react';
+
 export interface Doctor {
   id: string;
   name: string;
@@ -41,4 +43,9 @@ export interface Achievement {
   description: string;
   year: string;
   category: 'award' | 'certification' | 'milestone';
+}
+
+export interface IconComponentProps {
+  size?: number;
+  className?: string;
 }
